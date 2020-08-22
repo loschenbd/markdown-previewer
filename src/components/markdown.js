@@ -9,11 +9,11 @@ const Markdown = () => {
             <Typography>HTML Output</Typography>
             <Paper variant="outlined">
               <TextField
-                style= {{width: "100%"}}
+                style= {{width: "100%", minHeight: 600}}
                 id="editor"
                 label="Markdown Input"
                 multiline
-                rows={5}
+                rows={30}
                 defaultValue="Enter Markdown"
                 variant="outlined"
               />
@@ -22,7 +22,7 @@ const Markdown = () => {
 
         <Grid item sm={6} xs={12}>
           <Typography>HTML Output</Typography>
-          <Paper id="preview" variant="outlined"  style={{width: "100%"}}>
+          <Paper id="preview" variant="outlined"  style={{width: "100%", minHeight: 600}}>
 
           </Paper>
         </Grid>
