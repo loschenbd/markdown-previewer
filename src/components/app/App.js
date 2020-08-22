@@ -1,23 +1,25 @@
 import React from 'react';
 import './App.css';
+import Markdown from '../markdown'
+import Header from "../header";
+
+
 
 import { Grid, Button } from '@material-ui/core'
-import Header from "../header";
-import { Toolbar } from '@material-ui/core'
 
 function App() {
 
   return (
     <div className="App">
       <Header/>
-      <Grid container direction="column">
-        <Grid item>This is where the header will be</Grid>
+
+      <Grid container>
         <Grid item container>
-          <Grid xs={0} sm={2}/>
-            <Grid xs={12} sm={8}>
-                this is where the content will be
+          <Grid xs={0} sm={1}/>
+            <Grid xs={12} sm={10}>
+              <Markdown />
             </Grid>
-          <Grid xs={0} sm={0}/>
+          <Grid xs={0} sm={1}/>
         </Grid>
       </Grid>
       <Button variant="outlined" color="primary" target="_blank" href="https://github.com/loschenbd/markdown-previewer">View Codebase here</Button>

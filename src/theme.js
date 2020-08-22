@@ -1,16 +1,9 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: purple[500],
-    },
-    secondary: {
-      main: green[500],
-    },
-  },
-});
+const palette = {
+  primary: { main: '#3B7C4F' },
+  secondary: { main: '#5D9EAE' }
+};
+const themeName = 'Goblin Hippie Blue Hawk';
 
-export default theme;
+export default createMuiTheme({ palette, themeName });

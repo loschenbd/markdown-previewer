@@ -1,6 +1,6 @@
 import React from 'react'
 import {AppBar, Toolbar, Typography} from '@material-ui/core'
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import ListAltIcon from '@material-ui/icons/ListAlt';
 
 
 
@@ -11,8 +11,8 @@ class Header extends React.Component {
       <div>
         <AppBar position="static">
         <Toolbar>
-          <Typography>This is the AppBar</Typography>
-          <AccountCircleIcon />
+          <Typography>Markdown Previewer</Typography>
+          <ListAltIcon />
         </Toolbar>
         </AppBar>
       </div>
