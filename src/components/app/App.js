@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { Grid } from '@material-ui/core'
+import { Grid, Button } from '@material-ui/core'
 import Header from "../header";
 import { Toolbar } from '@material-ui/core'
 
@@ -20,7 +20,7 @@ function App() {
           <Grid xs={0} sm={0}/>
         </Grid>
       </Grid>
-      <a href="https://github.com/loschenbd/markdown-previewer">View Codebase here</a>
+      <Button variant="outlined" color="primary" target="_blank" href="https://github.com/loschenbd/markdown-previewer">View Codebase here</Button>
     </div>
 
   );
