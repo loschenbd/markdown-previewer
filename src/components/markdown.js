@@ -1,28 +1,41 @@
 import React from 'react';
 import {Grid, Paper, TextField, Typography } from '@material-ui/core'
-let marked = require("marked");
+const marked = require("marked");
+marked.setOptions({
+  breaks: true
+})
 
 
 class Markdown extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      markdown: "# Heading 1\n" +
-      "## Heading 2\n" +
-      "\n" +
-      "[View Codebase](https://loschenbd.github.io/markdown-previewer/)\n" +
-      "\n" +
-      "`let string = \"a block of code`\n" +
-      "\n" +
-      "- First Item\n" +
-      "- Second Item\n" +
-      "- Third item\n" +
-      "\n" +
-      "> “When you no longer resist a powerful emotion like fear,” he continued, “you're free to channel that energy in a more constructive direction. When you hire your problems as bodyguards, they show you how powerful your mind is. Their very fierceness makes you aware of how strong you are.”\n" +
-      "\n" +
-      "![flux logo](https://uploads-ssl.webflow.com/5d5421282086e70dcd3289a4/5d94e2d7d4118f80b8c718a9_Group%2073x.png)\n" +
-      "\n" +
-      "*Some bold text*"
+      markdown: `
+# Heading 1
+
+## Heading 2
+
+[View Codebase](https://loschenbd.github.io/markdown-previewer/)
+
+\` let inlineCode = "look, inline code" \`
+
+\`\`\`
+var add2 = function(number) {
+  return number + 2;
+}
+\`\`\`
+
+- First Item
+- Second Item
+- 3rd Item
+
+> “When you no longer resist a powerful emotion like fear,” he continued, “you're free to channel that energy in a more constructive direction. When you hire your problems as bodyguards, they show you how powerful your mind is. Their very fierceness makes you aware of how strong you are.”
+
+![flux logo](https://uploads-ssl.webflow.com/5d5421282086e70dcd3289a4/5d94e2d7d4118f80b8c718a9_Group%2073x.png)
+
+***Some bold text***
+
+`
     };
   };
   updateInput(markdown) {
